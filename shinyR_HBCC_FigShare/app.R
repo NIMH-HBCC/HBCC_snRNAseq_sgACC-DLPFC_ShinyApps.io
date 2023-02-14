@@ -4,10 +4,14 @@ library("iSEE")
 #library("shiny") # dont need them as "iSEE" have these all
 ###########################################
 # Fetch the data from FigShare
+#To retrieve an option
+#getOption('timeout')
+#To set an option
+options(timeout=600)
 dat <- ("https://figshare.com/ndownloader/files/39246662/sce_dlpfc_sgacc_final.RDS")
 download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
 
-sce_small <- load("sce_dlpfc_sgacc_final.RDS")
+sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
 initial <- list()
 
 ################################################################################
