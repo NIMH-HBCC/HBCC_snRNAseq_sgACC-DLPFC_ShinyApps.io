@@ -9,14 +9,21 @@ library("iSEE")
 #getOption('timeout')
 #To set an option
 options(timeout=600)
+# FigShare:
 #dat <- ("https://figshare.com/ndownloader/files/39246662/sce_dlpfc_sgacc_final.RDS")
 #download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
+# MendeleyData:
+# dat <- ("https://data.mendeley.com/public-files/datasets/4pmcfgy9ss/files/83d489c7-2773-4cc4-afcf-62e2d9f8f07d/file_downloaded")
+# download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
+# sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
 
-dat <- ("https://data.mendeley.com/public-files/datasets/4pmcfgy9ss/files/83d489c7-2773-4cc4-afcf-62e2d9f8f07d/file_downloaded")
-download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
+# FigShare:
+dat <- ("https://figshare.com/ndownloader/files/39261101/sce_dlpfc_sgacc_final_DietSuerat.RDS")
+download.file(dat, destfile = "sce_dlpfc_sgacc_final_DietSuerat.RDS")
+sce_small <- readRDS("sce_dlpfc_sgacc_final_DietSuerat.RDS")
 
 
-sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
+
 initial <- list()
 
 ################################################################################
