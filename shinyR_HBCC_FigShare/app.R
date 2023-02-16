@@ -22,8 +22,17 @@ dat <- ("https://figshare.com/ndownloader/files/39261101/sce_dlpfc_sgacc_final_D
 download.file(dat, destfile = "sce_dlpfc_sgacc_final_DietSuerat.RDS")
 sce_small <- readRDS("sce_dlpfc_sgacc_final_DietSuerat.RDS")
 
-
-
+# Add rowdat or Feature metadata
+rowData(sce_small)$geneName <- rownames(sce_small)
+# ################################################
+# Specify number of colurs for each cell type
+library(RColorBrewer)
+n <- 47
+qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
+col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+col_vector <- sample(col_vector, n)
+names(col_vector) <- as.vector(unique(sce_small$final_celltype))
+# ################################################
 initial <- list()
 
 ################################################################################
@@ -62,16 +71,17 @@ initial[["ReducedDimensionPlot1"]] <- new("ReducedDimensionPlot", Type = "TSNE",
 ################################################################################
 
 initial[["ComplexHeatmapPlot1"]] <- new("ComplexHeatmapPlot", Assay = "logcounts", CustomRows = TRUE, 
-                                        CustomRowsText = "SNAP25\nSLC17A6\nSLC17A7\nSLC17A8\nGAD1\nGAD2\nDRD1\nDRD2\nAQP4\nGFAP\nCLDN5\nFLT1\nCD163\nSIGLEC1\nC3\nCD74\nCOL1A2\nPDGFRB\nMBP\nPDGFRA\nVCAN\nSKAP1\nCD247", 
-                                        ClusterRows = FALSE, ClusterRowsDistance = "spearman", ClusterRowsMethod = "ward.D2", 
-                                        DataBoxOpen = FALSE, VisualChoices = "Annotations", ColumnData = c("broad.class", "neuron"), RowData = character(0), CustomBounds = FALSE, LowerBound = NA_real_, 
+                                        CustomRowsText = "SNAP25\nSLC17A6\nSLC17A7\nSLC17A8", ClusterRows = TRUE, 
+                                        ClusterRowsDistance = "spearman", ClusterRowsMethod = "ward.D2", 
+                                        DataBoxOpen = FALSE, VisualChoices = "Annotations", ColumnData = c("neuron", "final_celltype"), 
+                                        RowData = character(0), CustomBounds = FALSE, LowerBound = NA_real_, 
                                         UpperBound = NA_real_, AssayCenterRows = FALSE, AssayScaleRows = FALSE, 
                                         DivergentColormap = "purple < black < yellow", ShowDimNames = "Rows", 
-                                        LegendPosition = "Bottom", LegendDirection = "Horizontal", 
+                                        LegendPosition = "Right", LegendDirection = "Horizontal", 
                                         VisualBoxOpen = FALSE, NamesRowFontSize = 10, NamesColumnFontSize = 10, 
-                                        ShowColumnSelection = FALSE, OrderColumnSelection = FALSE, 
-                                        VersionInfo = list(iSEE = structure(list(c(2L, 4L, 0L)), class = c("package_version", 
-                                                                                                           "numeric_version"))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 6L, 
+                                        ShowColumnSelection = FALSE, OrderColumnSelection = TRUE, 
+                                        VersionInfo = list(iSEE = structure(list(c(2L, 10L, 0L)), class = c("package_version", 
+                                                                                                            "numeric_version"))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 6L, 
                                         SelectionBoxOpen = FALSE, RowSelectionSource = "---", ColumnSelectionSource = "---", 
                                         RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
                                         RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
@@ -124,6 +134,19 @@ initial[["FeatureAssayPlot1"]] <- new("FeatureAssayPlot", Assay = "logcounts", X
 
 
 
-######################################
-
-iSEE(sce_small, initial = initial)
+############################################################################
+# BUGfix: https://github.com/iSEE/iSEE/issues/588
+# It tells iSEE that discrete covariates (e.g., character, factor) are "colorable" up until 33 distinct levels (change as needed for other data sets).
+sce_small <- registerAppOptions(sce_small, color.maxlevels = 47)
+############################################################################
+iSEE(
+  sce_small,
+  appTitle = "HBCC sgACC-DLPFC snRNA-seq study 2023",
+  initial = initial,
+  colormap = ExperimentColorMap(colData = list(
+    final_celltype = function(n) {
+      col_vector[!grepl("drop", names(col_vector))]
+    }
+  ))
+)
+############################################################################
