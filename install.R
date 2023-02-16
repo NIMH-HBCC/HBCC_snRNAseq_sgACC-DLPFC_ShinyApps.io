@@ -2,6 +2,8 @@ if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
 BiocManager::install("iSEE")
+install.packages("RColorBrewer")
+
 #BiocManager::install("SingleCellExperiment") # Dont need this as "iSEE" has this
 #BiocManager::install("scMerge")
 
