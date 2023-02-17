@@ -155,20 +155,7 @@ initial[["RowDataTable1"]] <- new("RowDataTable", Selected = "SNAP25", Search = 
                                   ColumnSelectionDynamicSource = FALSE, RowSelectionRestrict = FALSE, 
                                   ColumnSelectionRestrict = FALSE, SelectionHistory = list())
 
-################################################################################
-# Settings for Column data table 1
-################################################################################
 
-initial[["ColumnDataTable1"]] <- new("ColumnDataTable", Selected = "2543_sgACC_2_TTGGAACCATTGTGCA", 
-                                     Search = "", SearchColumns = c("", "", "", "", "", "", "", 
-                                                                    "", "", "", "", "", "", "", "", "", "", "", "", "", ""), 
-                                     HiddenColumns = character(0), VersionInfo = list(iSEE = structure(list(
-                                       c(2L, 6L, 0L)), class = c("package_version", "numeric_version"
-                                       ))), PanelId = 1L, PanelHeight = 500L, PanelWidth = 6L, SelectionBoxOpen = FALSE, 
-                                     RowSelectionSource = "---", ColumnSelectionSource = "---", 
-                                     DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
-                                     RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
-                                     SelectionHistory = list())
 
 
 ######################################
