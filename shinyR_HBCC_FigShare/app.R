@@ -29,7 +29,7 @@ n <- 47
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
 col_vector <- sample(col_vector, n)
-names(col_vector) <- as.vector(unique(sce_small$final_celltype))
+names(col_vector) <- as.vector(unique(sce_small$celltype))
 # ################################################
 initial <- list()
 
@@ -71,7 +71,7 @@ initial[["ReducedDimensionPlot1"]] <- new("ReducedDimensionPlot", Type = "TSNE",
 initial[["ComplexHeatmapPlot1"]] <- new("ComplexHeatmapPlot", Assay = "logcounts", CustomRows = TRUE, 
                                         CustomRowsText = "SNAP25\nSLC17A6\nSLC17A7\nSLC17A8", ClusterRows = TRUE, 
                                         ClusterRowsDistance = "spearman", ClusterRowsMethod = "ward.D2", 
-                                        DataBoxOpen = FALSE, VisualChoices = "Annotations", ColumnData = c("neuron", "final_celltype"), 
+                                        DataBoxOpen = FALSE, VisualChoices = "Annotations", ColumnData = c("neuron", "celltype"), 
                                         RowData = character(0), CustomBounds = FALSE, LowerBound = NA_real_, 
                                         UpperBound = NA_real_, AssayCenterRows = FALSE, AssayScaleRows = FALSE, 
                                         DivergentColormap = "purple < black < yellow", ShowDimNames = "Rows", 
@@ -141,7 +141,7 @@ iSEE(
   appTitle = "HBCC sgACC-DLPFC snRNA-seq study 2023",
   initial = initial,
   colormap = ExperimentColorMap(colData = list(
-    final_celltype = function(n) {
+    celltype = function(n) {
       col_vector[!grepl("drop", names(col_vector))]
     }
   ))
