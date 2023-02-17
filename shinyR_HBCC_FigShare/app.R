@@ -65,28 +65,6 @@ initial[["ReducedDimensionPlot1"]] <- new("ReducedDimensionPlot", Type = "TSNE",
 
 
 ################################################################################
-# Settings for Complex heatmap 1
-################################################################################
-
-initial[["ComplexHeatmapPlot1"]] <- new("ComplexHeatmapPlot", Assay = "logcounts", CustomRows = TRUE, 
-                                        CustomRowsText = "SNAP25\nSLC17A6\nSLC17A7\nSLC17A8", ClusterRows = TRUE, 
-                                        ClusterRowsDistance = "spearman", ClusterRowsMethod = "ward.D2", 
-                                        DataBoxOpen = FALSE, VisualChoices = "Annotations", ColumnData = c("neuron", "celltype"), 
-                                        RowData = character(0), CustomBounds = FALSE, LowerBound = NA_real_, 
-                                        UpperBound = NA_real_, AssayCenterRows = FALSE, AssayScaleRows = FALSE, 
-                                        DivergentColormap = "purple < black < yellow", ShowDimNames = "Rows", 
-                                        LegendPosition = "Right", LegendDirection = "Horizontal", 
-                                        VisualBoxOpen = FALSE, NamesRowFontSize = 10, NamesColumnFontSize = 10, 
-                                        ShowColumnSelection = FALSE, OrderColumnSelection = TRUE, 
-                                        VersionInfo = list(iSEE = structure(list(c(2L, 10L, 0L)), class = c("package_version", 
-                                                                                                            "numeric_version"))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 6L, 
-                                        SelectionBoxOpen = FALSE, RowSelectionSource = "---", ColumnSelectionSource = "---", 
-                                        RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
-                                        RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
-                                        SelectionHistory = list())
-
-
-################################################################################
 # Settings for Feature assay plot 1
 ################################################################################
 
@@ -116,6 +94,26 @@ initial[["FeatureAssayPlot1"]] <- new("FeatureAssayPlot", Assay = "logcounts", X
                                       ColumnSelectionSource = "---", DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE,
                                       ColumnSelectionDynamicSource = FALSE, RowSelectionRestrict = FALSE,
                                       ColumnSelectionRestrict = TRUE, SelectionHistory = list())
+################################################################################
+# Settings for Complex heatmap 1
+################################################################################
+
+initial[["ComplexHeatmapPlot1"]] <- new("ComplexHeatmapPlot", Assay = "logcounts", CustomRows = TRUE, 
+                                        CustomRowsText = "SNAP25\nSLC17A6\nSLC17A7\nSLC17A8", ClusterRows = TRUE, 
+                                        ClusterRowsDistance = "spearman", ClusterRowsMethod = "ward.D2", 
+                                        DataBoxOpen = FALSE, VisualChoices = "Annotations", ColumnData = c("neuron", 
+                                                                                                           "celltype"), RowData = character(0), CustomBounds = FALSE, 
+                                        LowerBound = NA_real_, UpperBound = NA_real_, AssayCenterRows = FALSE, 
+                                        AssayScaleRows = FALSE, DivergentColormap = "purple < black < yellow", 
+                                        ShowDimNames = "Rows", LegendPosition = "Right", LegendDirection = "Horizontal", 
+                                        VisualBoxOpen = FALSE, NamesRowFontSize = 10, NamesColumnFontSize = 10, 
+                                        ShowColumnSelection = FALSE, OrderColumnSelection = TRUE, 
+                                        VersionInfo = list(iSEE = structure(list(c(2L, 6L, 0L)), class = c("package_version", 
+                                                                                                           "numeric_version"))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 12L, 
+                                        SelectionBoxOpen = FALSE, RowSelectionSource = "---", ColumnSelectionSource = "---", 
+                                        RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
+                                        RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
+                                        SelectionHistory = list())
 
 ################################################################################
 # Settings for Column data plot 1
