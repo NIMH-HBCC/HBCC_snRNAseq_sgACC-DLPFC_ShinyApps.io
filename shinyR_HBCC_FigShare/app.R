@@ -143,62 +143,6 @@ initial[["FeatureAssayPlot1"]] <- new("FeatureAssayPlot", Assay = "logcounts", X
                                       SelectionHistory = list())
 
 ################################################################################
-# Settings for Row data plot 1
-################################################################################
-
-initial[["RowDataPlot1"]] <- new("RowDataPlot", XAxis = "Row data", YAxis = "mean", XAxisRowData = "detected", 
-                                 FacetRowByRowData = "source", FacetColumnByRowData = "source", 
-                                 ColorByRowData = "geneLength", ColorBySampleNameAssay = "logcounts", 
-                                 ColorByFeatureNameColor = "#FF0000", ShapeByRowData = "source", 
-                                 SizeByRowData = "mean", TooltipRowData = character(0), FacetRowBy = "None", 
-                                 FacetColumnBy = "None", ColorBy = "Row data", ColorByDefaultColor = "#000000", 
-                                 ColorByFeatureName = "RP11-34P13.3", ColorByFeatureSource = "---", 
-                                 ColorByFeatureDynamicSource = FALSE, ColorBySampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", 
-                                 ColorBySampleSource = "---", ColorBySampleDynamicSource = FALSE, 
-                                 ShapeBy = "None", SizeBy = "None", SelectionAlpha = 0.1, 
-                                 ZoomData = numeric(0), BrushData = list(), VisualBoxOpen = TRUE, 
-                                 VisualChoices = "Color", ContourAdd = FALSE, ContourColor = "#0000FF", 
-                                 PointSize = 1, PointAlpha = 1, Downsample = FALSE, DownsampleResolution = 200, 
-                                 CustomLabels = FALSE, CustomLabelsText = "RP11-34P13.3", 
-                                 FontSize = 1, LegendPointSize = 1, LegendPosition = "Bottom", 
-                                 HoverInfo = TRUE, LabelCenters = FALSE, LabelCentersBy = "source", 
-                                 LabelCentersColor = "#000000", VersionInfo = list(iSEE = structure(list(
-                                   c(2L, 10L, 0L)), class = c("package_version", "numeric_version"
-                                   ))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 6L, SelectionBoxOpen = FALSE, 
-                                 RowSelectionSource = "---", ColumnSelectionSource = "---", 
-                                 DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
-                                 RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
-                                 SelectionHistory = list())
-################################################################################
-# Settings for Sample assay plot 1
-################################################################################
-initial[["SampleAssayPlot1"]] <- new("SampleAssayPlot", Assay = "logcounts", XAxis = "Row data", 
-                                     XAxisRowData = "detected", XAxisSampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", 
-                                     XAxisSampleSource = "---", XAxisSampleDynamicSource = FALSE, 
-                                     YAxisSampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", YAxisSampleSource = "---", 
-                                     YAxisSampleDynamicSource = FALSE, FacetRowByRowData = "source", 
-                                     FacetColumnByRowData = "source", ColorByRowData = "mean", 
-                                     ColorBySampleNameAssay = "logcounts", ColorByFeatureNameColor = "#FF0000", 
-                                     ShapeByRowData = "source", SizeByRowData = "mean", TooltipRowData = character(0), 
-                                     FacetRowBy = "None", FacetColumnBy = "None", ColorBy = "Row data", 
-                                     ColorByDefaultColor = "#000000", ColorByFeatureName = "RP11-34P13.3", 
-                                     ColorByFeatureSource = "---", ColorByFeatureDynamicSource = FALSE, 
-                                     ColorBySampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", ColorBySampleSource = "---", 
-                                     ColorBySampleDynamicSource = FALSE, ShapeBy = "None", SizeBy = "None", 
-                                     SelectionAlpha = 0.1, ZoomData = numeric(0), BrushData = list(), 
-                                     VisualBoxOpen = TRUE, VisualChoices = "Color", ContourAdd = FALSE, 
-                                     ContourColor = "#0000FF", PointSize = 1, PointAlpha = 1, 
-                                     Downsample = FALSE, DownsampleResolution = 200, CustomLabels = FALSE, 
-                                     CustomLabelsText = "RP11-34P13.3", FontSize = 1, LegendPointSize = 1, 
-                                     LegendPosition = "Bottom", HoverInfo = TRUE, LabelCenters = FALSE, 
-                                     LabelCentersBy = "source", LabelCentersColor = "#000000", 
-                                     VersionInfo = list(iSEE = structure(list(c(2L, 10L, 0L)), class = c("package_version", 
-                                                                                                         "numeric_version"))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 6L, 
-                                     SelectionBoxOpen = FALSE, RowSelectionSource = "---", ColumnSelectionSource = "---", 
-                                     DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
-                                     RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
-                                     SelectionHistory = list())
-################################################################################
 # Settings for Row data table 1
 ################################################################################
 
