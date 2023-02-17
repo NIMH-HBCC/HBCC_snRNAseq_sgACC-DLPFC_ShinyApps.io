@@ -36,58 +36,30 @@ initial <- list()
 ################################################################################
 # Settings for Reduced dimension plot 1
 ################################################################################
-
 initial[["ReducedDimensionPlot1"]] <- new("ReducedDimensionPlot", Type = "TSNE", XAxis = 1L, YAxis = 2L, 
-                                          FacetRowByColData = "sample_ID", FacetColumnByColData = "sample_ID", 
-                                          ColorByColumnData = "broad.class", ColorByFeatureNameAssay = "logcounts", 
-                                          ColorBySampleNameColor = "#FF0000", ShapeByColumnData = "sample_ID", 
-                                          SizeByColumnData = "frac.mito", FacetRowBy = "None", FacetColumnBy = "None", 
-                                          ColorBy = "Column data", ColorByDefaultColor = "#000000", 
-                                          ColorByFeatureName = "SNAP25", ColorByFeatureSource = "---", 
-                                          ColorByFeatureDynamicSource = FALSE, ColorBySampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", 
-                                          ColorBySampleSource = "---", ColorBySampleDynamicSource = FALSE, 
-                                          ShapeBy = "None", SizeBy = "None", SelectionAlpha = 0.1, 
-                                          ZoomData = numeric(0), BrushData = list(), VisualBoxOpen = FALSE, 
-                                          VisualChoices = "Color", ContourAdd = FALSE, ContourColor = "#0000FF", 
-                                          PointSize = 1, PointAlpha = 1, Downsample = FALSE, DownsampleResolution = 200, 
-                                          CustomLabels = FALSE, CustomLabelsText = "2543_sgACC_2_AAACCTGAGATAGGAG", 
-                                          FontSize = 1, LegendPointSize = 1, LegendPosition = "Bottom", 
-                                          HoverInfo = TRUE, LabelCenters = FALSE, LabelCentersBy = "sample_ID", 
-                                          LabelCentersColor = "#000000", VersionInfo = list(iSEE = structure(list(
-                                            c(2L, 6L, 0L)), class = c("package_version", "numeric_version"
-                                            ))), PanelId = c(ReducedDimensionPlot = 1L), PanelHeight = 600L, 
-                                          PanelWidth = 6L, SelectionBoxOpen = FALSE, RowSelectionSource = "---", 
-                                          ColumnSelectionSource = "---", DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE, 
-                                          ColumnSelectionDynamicSource = FALSE, RowSelectionRestrict = FALSE, 
-                                          ColumnSelectionRestrict = TRUE, SelectionHistory = list())
-
-################################################################################
-# Settings for Column data plot 1
-################################################################################
-
-initial[["ColumnDataPlot1"]] <- new("ColumnDataPlot", XAxis = "Column data", YAxis = "broad.class", 
-                                    XAxisColumnData = "celltype", FacetRowByColData = "sample_ID", 
-                                    FacetColumnByColData = "sample_ID", ColorByColumnData = "celltype", 
-                                    ColorByFeatureNameAssay = "logcounts", ColorBySampleNameColor = "#FF0000", 
-                                    ShapeByColumnData = "sample_ID", SizeByColumnData = "frac.mito", 
-                                    FacetRowBy = "None", FacetColumnBy = "None", ColorBy = "Column data", 
-                                    ColorByDefaultColor = "#000000", ColorByFeatureName = "RP11-34P13.3", 
-                                    ColorByFeatureSource = "---", ColorByFeatureDynamicSource = FALSE, 
-                                    ColorBySampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", ColorBySampleSource = "---", 
-                                    ColorBySampleDynamicSource = FALSE, ShapeBy = "None", SizeBy = "None", 
-                                    SelectionAlpha = 0.1, ZoomData = numeric(0), BrushData = list(), 
-                                    VisualBoxOpen = FALSE, VisualChoices = "Color", ContourAdd = FALSE, 
-                                    ContourColor = "#0000FF", PointSize = 1, PointAlpha = 1, 
-                                    Downsample = FALSE, DownsampleResolution = 200, CustomLabels = FALSE, 
-                                    CustomLabelsText = "2543_sgACC_2_AAACCTGAGATAGGAG", FontSize = 1, 
-                                    LegendPointSize = 1, LegendPosition = "Bottom", HoverInfo = TRUE, 
-                                    LabelCenters = FALSE, LabelCentersBy = "sample_ID", LabelCentersColor = "#000000", 
-                                    VersionInfo = list(iSEE = structure(list(c(2L, 6L, 0L)), class = c("package_version", 
-                                                                                                       "numeric_version"))), PanelId = 1L, PanelHeight = 600L, PanelWidth = 6L, 
-                                    SelectionBoxOpen = FALSE, RowSelectionSource = "---", ColumnSelectionSource = "---", 
-                                    DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
-                                    RowSelectionRestrict = FALSE, ColumnSelectionRestrict = FALSE, 
-                                    SelectionHistory = list())
+    FacetRowByColData = "sample_ID", FacetColumnByColData = "sample_ID", 
+    ColorByColumnData = "broad.class", ColorByFeatureNameAssay = "logcounts", 
+    ColorBySampleNameColor = "#FF0000", ShapeByColumnData = "sample_ID", 
+    SizeByColumnData = "nCount_RNA", TooltipColumnData = character(0), 
+    FacetRowBy = "None", FacetColumnBy = "None", ColorBy = "Column data", 
+    ColorByDefaultColor = "#000000", ColorByFeatureName = "SNAP25", 
+    ColorByFeatureSource = "---", ColorByFeatureDynamicSource = FALSE, 
+    ColorBySampleName = "2543_sgACC_2_AAACCTGAGATAGGAG", ColorBySampleSource = "---", 
+    ColorBySampleDynamicSource = FALSE, ShapeBy = "None", SizeBy = "None", 
+    SelectionAlpha = 0.1, ZoomData = numeric(0), BrushData = list(), 
+    VisualBoxOpen = FALSE, VisualChoices = "Color", ContourAdd = FALSE, 
+    ContourColor = "#0000FF", PointSize = 1, PointAlpha = 1, 
+    Downsample = FALSE, DownsampleResolution = 200, CustomLabels = FALSE, 
+    CustomLabelsText = "2543_sgACC_2_AAACCTGAGATAGGAG", FontSize = 1, 
+    LegendPointSize = 1, LegendPosition = "Bottom", HoverInfo = TRUE, 
+    LabelCenters = FALSE, LabelCentersBy = "sample_ID", LabelCentersColor = "#000000", 
+    VersionInfo = list(iSEE = structure(list(c(2L, 10L, 0L)), class = c("package_version", 
+    "numeric_version"))), PanelId = c(ReducedDimensionPlot = 1L), 
+    PanelHeight = 600L, PanelWidth = 12L, SelectionBoxOpen = FALSE, 
+    RowSelectionSource = "---", ColumnSelectionSource = "---", 
+    DataBoxOpen = FALSE, RowSelectionDynamicSource = FALSE, ColumnSelectionDynamicSource = FALSE, 
+    RowSelectionRestrict = FALSE, ColumnSelectionRestrict = TRUE, 
+    SelectionHistory = list())
 
 ################################################################################
 # Settings for Complex heatmap 1
