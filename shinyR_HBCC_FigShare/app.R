@@ -18,9 +18,9 @@ options(timeout=600)
 #sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
 
 # FigShare:
-dat <- ("https://figshare.com/ndownloader/files/39307625/sce_dlpfc_sgacc_final_DietSuerat.RDS")
-download.file(dat, destfile = "sce_dlpfc_sgacc_final_DietSuerat.RDS")
-sce_small <- readRDS("sce_dlpfc_sgacc_final_DietSuerat.RDS")
+dat <- ("https://figshare.com/ndownloader/files/39307748/sce_dlpfc_sgacc_final_DietSuerat_v1.RDS")
+download.file(dat, destfile = "sce_dlpfc_sgacc_final_DietSuerat_v1.RDS")
+sce_small <- readRDS("sce_dlpfc_sgacc_final_DietSuerat_v1.RDS")
 
 # ################################################
 # Specify number of colurs for each cell type
