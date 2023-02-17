@@ -10,7 +10,10 @@ library("iSEE")
 #To set an option
 options(timeout=600)
 # FigShare:
-dat <- ("https://figshare.com/ndownloader/files/39305303/sce_dlpfc_sgacc_final.RDS")
+# DietSeura Object
+dat <- ("https://figshare.com/ndownloader/files/39246662/sce_dlpfc_sgacc_final.RDS")
+# regular latest Seurat object
+#dat <- ("https://figshare.com/ndownloader/files/39305303/sce_dlpfc_sgacc_final.RDS")
 download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
 sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
 
