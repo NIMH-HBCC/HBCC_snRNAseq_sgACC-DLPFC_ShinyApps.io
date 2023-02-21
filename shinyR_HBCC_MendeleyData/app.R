@@ -12,10 +12,11 @@ library("iSEE")
 options(timeout=600)
 
 
-# MendeleyData:
+# MendeleyData:dat <- ("https://data.mendeley.com/public-files/datasets/4pmcfgy9ss/files/9ffd5deb-c555-496d-8f2c-b3728cdc54d1/file_downloaded")
 #dat <- ("https://data.mendeley.com/api/datasets/4pmcfgy9ss/draft/files/9ffd5deb-c555-496d-8f2c-b3728cdc54d1/file_downloaded")
 #dat <- ("https://data.mendeley.com/api/datasets/4pmcfgy9ss/draft/files/9ffd5deb-c555-496d-8f2c-b3728cdc54d1/file_downloaded")
-dat <- ("https://data.mendeley.com/public-files/datasets/4pmcfgy9ss/files/83d489c7-2773-4cc4-afcf-62e2d9f8f07d/file_downloaded")
+#dat <- ("https://data.mendeley.com/public-files/datasets/4pmcfgy9ss/files/83d489c7-2773-4cc4-afcf-62e2d9f8f07d/file_downloaded")
+dat <- ("https://data.mendeley.com/public-files/datasets/4pmcfgy9ss/files/9ffd5deb-c555-496d-8f2c-b3728cdc54d1/file_downloaded")
 download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
 sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
 
