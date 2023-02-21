@@ -16,7 +16,7 @@ options(timeout=600)
 dat <- ("https://figshare.com/ndownloader/files/39305303/sce_dlpfc_sgacc_final.RDS")
 download.file(dat, destfile = "sce_dlpfc_sgacc_final.RDS")
 sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
-
+tour <- read.delim("tour.txt", sep=";", stringsAsFactors = FALSE, row.names = NULL)
 # FigShare:
 #dat <- ("https://figshare.com/ndownloader/files/39307748/sce_dlpfc_sgacc_final_DietSuerat_v1.RDS")
 #download.file(dat, destfile = "sce_dlpfc_sgacc_final_DietSuerat_v1.RDS")
@@ -163,6 +163,7 @@ sce_small <- registerAppOptions(sce_small, color.maxlevels = 47)
 
 iSEE(
   sce_small,
+  tour = tour,
   appTitle = "HBCC sgACC-DLPFC snRNA-seq study 2023",
   initial = initial,
   colormap = ExperimentColorMap(colData = list(
