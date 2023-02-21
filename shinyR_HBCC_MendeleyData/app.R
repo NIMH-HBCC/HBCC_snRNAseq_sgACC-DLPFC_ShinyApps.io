@@ -22,6 +22,7 @@ sce_small <- readRDS("sce_dlpfc_sgacc_final.RDS")
 #dat <- ("https://data.mendeley.com/api/datasets/4pmcfgy9ss/draft/files/eae29684-04fc-43af-b41d-2a7631a5cac0/file_downloaded")
 #download.file(dat, destfile = "sce_dlpfc_sgacc_final_DietSuerat.RDS")
 #sce_small <- readRDS("sce_dlpfc_sgacc_final_DietSuerat.RDS")
+tour <- read.delim("tour.txt", sep=";", stringsAsFactors = FALSE, row.names = NULL)
 
 # ################################################
 # Specify number of colurs for each cell type
@@ -235,6 +236,7 @@ sce_small <- registerAppOptions(sce_small, color.maxlevels = 47)
 
 iSEE(
   sce_small,
+  tour = tour,
   appTitle = "HBCC sgACC-DLPFC snRNA-seq study 2023",
   initial = initial,
   colormap = ExperimentColorMap(colData = list(
