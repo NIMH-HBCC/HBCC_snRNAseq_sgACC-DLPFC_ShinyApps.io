@@ -1,23 +1,2 @@
-### To launch mybinder jupyter nbviewer click link below:
-
-https://mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC.git/
-
-
-### To launch Rstudio click link below:
-https://mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC.git/main?urlpath=rstudio
-
-### To launch R Shiny app using FigShare data:
+### To launch iSEE instance: a browsable data portal:
 https://mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC/main?urlpath=shiny/shinyR_HBCC_FigShare/
-
-https://gesis.mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC/main?urlpath=shiny/shinyR_HBCC_FigShare/
-
-https://gke.mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC/main?urlpath=shiny/shinyR_HBCC_FigShare/
-
-
-### To launch R Shiny app using MendeleyData:
-https://mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC/main?urlpath=shiny/shinyR_HBCC_MendeleyData/
-
-https://gesis.mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC/main?urlpath=shiny/shinyR_HBCC_MendeleyData/
-
-https://gke.mybinder.org/v2/gh/NIMH-HBCC/HBCC_snRNAseq_sgACC-DLPFC/main?urlpath=shiny/shinyR_HBCC_MendeleyData/
-
