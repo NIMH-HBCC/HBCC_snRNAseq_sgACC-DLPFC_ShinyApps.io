@@ -1,2 +1,0 @@
-libglpk-dev
-libgsl0-dev
